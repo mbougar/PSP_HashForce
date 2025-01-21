@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PSP_HashForce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2aabc998aa0c7645b3fad4b5709ef010eb455b61")]
 [assembly: System.Reflection.AssemblyProductAttribute("PSP_HashForce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PSP_HashForce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

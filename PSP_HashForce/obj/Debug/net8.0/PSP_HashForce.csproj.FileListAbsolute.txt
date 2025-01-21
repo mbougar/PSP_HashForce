@@ -12,3 +12,4 @@ C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\refin
 C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.pdb
 C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.genruntimeconfig.cache
 C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\ref\PSP_HashForce.dll
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.sourcelink.json

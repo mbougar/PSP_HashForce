@@ -2,7 +2,7 @@
 
 using PSP_HashForce;
 
-string filePath = "PSP_HashForce/2151220-passwords.txt";
+string filePath = "2151220-passwords.txt";
 
 if (File.Exists(filePath))
 {
