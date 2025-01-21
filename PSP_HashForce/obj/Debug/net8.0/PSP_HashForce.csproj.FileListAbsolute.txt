@@ -1,0 +1,14 @@
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\bin\Debug\net8.0\PSP_HashForce.exe
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\bin\Debug\net8.0\PSP_HashForce.deps.json
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\bin\Debug\net8.0\PSP_HashForce.runtimeconfig.json
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\bin\Debug\net8.0\PSP_HashForce.dll
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\bin\Debug\net8.0\PSP_HashForce.pdb
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.AssemblyInfoInputs.cache
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.AssemblyInfo.cs
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.csproj.CoreCompileInputs.cache
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.dll
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\refint\PSP_HashForce.dll
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.pdb
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\PSP_HashForce.genruntimeconfig.cache
+C:\Users\Manuel\RiderProjects\PSP_HashForce\PSP_HashForce\obj\Debug\net8.0\ref\PSP_HashForce.dll
