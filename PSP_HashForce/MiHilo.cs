@@ -2,35 +2,41 @@ namespace PSP_HashForce;
 
 public class MiHilo
 {
-    private Thread hilo;
-    private string text;
-    private Wrapper<bool> stopThread;
+    private readonly Thread _hilo;
+    private readonly string _nombre;
+    private readonly string _passwordToFind;
+    private readonly Wrapper<bool> _stopThread;
+    private readonly List<string> _passwords;
 
-    public MiHilo(string text, Wrapper<bool> stopFlag)
+    public MiHilo(string nombre, string passwordToFind, List<string> passwords, Wrapper<bool> stopFlag)
     {
-        this.text = text;
-        this.stopThread = stopFlag;
-        hilo = new Thread(_process);
+        _nombre = nombre;
+        _passwordToFind = passwordToFind;
+        _stopThread = stopFlag;
+        _passwords = passwords;
+        _hilo = new Thread(_process);
     }
 
     public void Start()
     {
-        hilo.Start();
+        _hilo.Start();
     }
 
-    void _process()
+    private void _process()
     {
-        for (int i = 0; i < 1000; i++)
+        foreach (var password in _passwords)
         {
-            if (stopThread.Value)
+            if (_stopThread.Value)
             {
-                Console.WriteLine($"Hilo {text} parado.");
+                Console.WriteLine($"Hilo {_nombre} parado.");
                 return;
             }
 
-            Console.Write(text);
+            if (_passwordToFind == password)
+            {
+                _stopThread.Value = true;
+                Console.WriteLine($"Contraseña encontrada ({_passwordToFind}) por el hilo {_nombre}.");
+            }
         }
-        stopThread.Value = true;
-        Console.WriteLine($"Ha terminado: {text}");
     }
 }

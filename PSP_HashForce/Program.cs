@@ -2,24 +2,33 @@
 
 using PSP_HashForce;
 
-string filePath = "2151220-passwords.txt";
+const string filePath = "2151220-passwords.txt";
+const int numHilos = 10;
 
 if (File.Exists(filePath))
 {
-    List<string> passwords = new List<string>(File.ReadAllLines(filePath));
-    Console.WriteLine(passwords.Count);
+    var passwords = new List<string>(File.ReadAllLines(filePath));
+    var random = new Random();
+    var numPasswords = passwords.Count;
+    var chosenPassword = passwords[random.Next(numPasswords)];
+    Console.WriteLine($"La contraseña que hay que buscar es: {chosenPassword}");
+    
+    var sublistSize = numPasswords / numHilos;
+    var stopThreads = new Wrapper<bool>(false);
+    var lastIndex = 0;
+    
+    for (int i = 0; i < numHilos; i++)
+    {
+        var adjustedSublistSize = (i == numHilos - 1) ? numPasswords - lastIndex : sublistSize;
+        var sublist = passwords.GetRange(lastIndex, adjustedSublistSize);
+        
+        var hilo = new MiHilo($"{i}", chosenPassword, sublist, stopThreads);
+        hilo.Start();
+        
+        lastIndex += adjustedSublistSize;
+    }
 }
 else
 {
     Console.WriteLine("El archivo no existe.");
 }
-
-Wrapper<bool> stopThreads = new Wrapper<bool>(false);
-
-MiHilo t1 = new MiHilo("x", stopThreads);
-MiHilo t2 = new MiHilo("y", stopThreads);
-MiHilo t3 = new MiHilo("z", stopThreads);
-
-t1.Start();
-t2.Start();
-t3.Start();
