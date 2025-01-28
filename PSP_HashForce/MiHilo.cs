@@ -7,6 +7,7 @@ public class MiHilo
     private readonly string _passwordToFind;
     private readonly Wrapper<bool> _stopThread;
     private readonly List<string> _passwords;
+    private ShaHasher _hasher = new ShaHasher();
 
     public MiHilo(string nombre, string passwordToFind, List<string> passwords, Wrapper<bool> stopFlag)
     {
@@ -32,7 +33,7 @@ public class MiHilo
                 return;
             }
 
-            if (_passwordToFind == password)
+            if (_passwordToFind == _hasher.GetStringSha256Hash(password))
             {
                 _stopThread.Value = true;
                 Console.WriteLine($"Contraseña encontrada ({_passwordToFind}) por el hilo {_nombre}.");

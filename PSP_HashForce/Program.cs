@@ -7,11 +7,14 @@ const int numHilos = 10;
 
 if (File.Exists(filePath))
 {
+    var shaHasher = new ShaHasher();
     var passwords = new List<string>(File.ReadAllLines(filePath));
     var random = new Random();
     var numPasswords = passwords.Count;
     var chosenPassword = passwords[random.Next(numPasswords)];
     Console.WriteLine($"La contraseña que hay que buscar es: {chosenPassword}");
+    var hashedPassword = shaHasher.GetStringSha256Hash(chosenPassword);
+    Console.WriteLine($"La contraseña hasheada es: {hashedPassword}");
     
     var sublistSize = numPasswords / numHilos;
     var stopThreads = new Wrapper<bool>(false);
@@ -22,7 +25,7 @@ if (File.Exists(filePath))
         var adjustedSublistSize = (i == numHilos - 1) ? numPasswords - lastIndex : sublistSize;
         var sublist = passwords.GetRange(lastIndex, adjustedSublistSize);
         
-        var hilo = new MiHilo($"{i}", chosenPassword, sublist, stopThreads);
+        var hilo = new MiHilo($"{i}", hashedPassword, sublist, stopThreads);
         hilo.Start();
         
         lastIndex += adjustedSublistSize;
