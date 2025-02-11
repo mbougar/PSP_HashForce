@@ -29,7 +29,7 @@ public class MiHilo
         {
             if (_stopThread.Value)
             {
-                Console.WriteLine($"Hilo {_nombre} parado.");
+                //Console.WriteLine($"Hilo {_nombre} parado.");
                 return;
             }
 
